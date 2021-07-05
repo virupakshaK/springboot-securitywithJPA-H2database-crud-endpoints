@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "1d252742-9d82-4f63-b5e8-779633dac1c3",
+		"name": "SpringBoot+SecuirtyWithJPA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SaveEmployee",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "testkey1",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Access-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Secret-key",
+						"value": "dfddnfnm",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"first Name\": \"Virupaksha\",\r\n    \"lastName\": \"Bannela\",\r\n    \"career\" : \"testing employe addition.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6364/employee/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6364",
+					"path": [
+						"employee",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateEmployee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6364/employee/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6364",
+					"path": [
+						"employee",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmployee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "veeru",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "veeru123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6364/employee/delete?empId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6364",
+					"path": [
+						"employee",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "empId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
